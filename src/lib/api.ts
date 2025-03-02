@@ -1,8 +1,9 @@
+// import { SubmitDomain } from '@/pages/submit-domain'
 import axios from 'axios'
 
 // Create axios instance with base URL and default headers
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8000',
+  baseURL: process.env.VITE_API_URL || 'http://localhost:8000',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -43,7 +44,8 @@ export const authApi = {
 
 // Domains API
 export const domainsApi = {
-  submitDomain: (domain: string, email: string) => 
+  // submitDomain: (domain: string, email: string) =>
+  submitDomain: (domain: string) => 
     api.post('/nameservers/create', { domain }),
   getDomains: () => 
     api.get('/nameservers'),

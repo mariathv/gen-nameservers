@@ -29,7 +29,8 @@ export function SubmitDomain() {
     setIsSubmitting(true)
     
     try {
-      await domainsApi.submitDomain(domain, email)
+      // await domainsApi.submitDomain(domain, email)
+      await domainsApi.submitDomain(domain)
       setIsSuccess(true)
       toast({
         title: "Success!",

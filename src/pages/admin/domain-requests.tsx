@@ -167,7 +167,6 @@ export function DomainRequests() {
                           size="sm"
                           className="text-red-500 border-red-500/20 hover:bg-red-500/10 hover:text-red-500"
                           onClick={() => handleReject(request.id)}
-                 onClick={() => handleReject(request.id)}
                         >
                           <X className="mr-1 h-4 w-4" />
                           Revoke
